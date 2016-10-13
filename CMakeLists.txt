@@ -33,7 +33,7 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "MeloRPG")
-add_executable(${EXECUTABLE_NAME} main.cpp MeloRPG.cpp MeloRPG.h ComponentManager.cpp ComponentManager.h IDrawable.cpp IDrawable.h IUpdatable.cpp IUpdatable.h IComponent.cpp IComponent.h GlobalDefs.h)
+add_executable(${EXECUTABLE_NAME} main.cpp MeloRPG.cpp MeloRPG.h Managers/ComponentManager.cpp Managers/ComponentManager.h Components/Interfaces/IDrawable.cpp Components/Interfaces/IDrawable.h Components/Interfaces/IUpdatable.cpp Components/Interfaces/IUpdatable.h Components/Interfaces/IComponent.cpp Components/Interfaces/IComponent.h GlobalDefs.h)
 
 
 # Detect and add SFML

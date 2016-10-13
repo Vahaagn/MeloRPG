@@ -7,11 +7,17 @@
 
 
 #include "GlobalDefs.h"
+#include "Managers/ComponentManager.h"
 #include <SFML/Graphics.hpp>
 
 class MeloRPG {
 private:
     std::shared_ptr<sf::RenderWindow> _window;
+    ComponentManager _componentManager;
+
+public:
+    MeloRPG();
+    virtual ~MeloRPG();
 
 public:
     void createWindow(int width, int height, std::string title);
