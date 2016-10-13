@@ -13,21 +13,26 @@ void MeloRPG::start() {
     sf::Clock timer;
     sf::Time elapsedTime;
 
-    while(_window->isOpen()) {
+    while (_window->isOpen()) {
         elapsedTime = timer.restart();
 
         update(elapsedTime);
-
-        _window->clear();
         draw();
-        _window->display();
     }
 }
 
-void MeloRPG::update(sf::Time& game_time) {
+void MeloRPG::update(sf::Time &game_time) {
+    sf::Event event;
 
+    while (_window->pollEvent(event)) {
+        if (event.type == sf::Event::Closed ||
+            (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+            _window->close();
+    }
 }
 
 void MeloRPG::draw() {
+    _window->clear(sf::Color(100, 149, 237));
 
+    _window->display();
 }
