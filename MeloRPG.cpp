@@ -6,7 +6,7 @@
 
 void MeloRPG::createWindow(int width, int height, std::string title) {
     sf::VideoMode videoMode(width, height);
-    _window = std::unique_ptr<sf::RenderWindow>(new sf::RenderWindow(videoMode, title));
+    _window = std::shared_ptr<sf::RenderWindow>(new sf::RenderWindow(videoMode, title));
 }
 
 void MeloRPG::start() {

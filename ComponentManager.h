@@ -6,8 +6,8 @@
 #define MELORPG_COMPONENTMANAGER_H
 
 #include <forward_list>
-#include <memory>
 #include <SFML/Graphics/RenderTarget.hpp>
+#include "GlobalDefs.h"
 
 
 class IComponent {

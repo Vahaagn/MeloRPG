@@ -5,6 +5,7 @@
 #ifndef MELORPG_GLOBALDEFS_H
 #define MELORPG_GLOBALDEFS_H
 
+#include <memory>
 #include <SFML/Graphics/RenderTarget.hpp>
 
 typedef std::shared_ptr <sf::RenderTarget> PtrRenderTarget;

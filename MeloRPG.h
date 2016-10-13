@@ -6,12 +6,12 @@
 #define MELORPG_MELORPG_H
 
 
-#include <bits/unique_ptr.h>
-#include <SFML/Graphics/RenderWindow.hpp>
+#include "GlobalDefs.h"
+#include <SFML/Graphics.hpp>
 
 class MeloRPG {
 private:
-    std::unique_ptr<sf::RenderWindow> _window;
+    std::shared_ptr<sf::RenderWindow> _window;
 
 public:
     void createWindow(int width, int height, std::string title);
