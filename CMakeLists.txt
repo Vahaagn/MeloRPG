@@ -33,7 +33,7 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "MeloRPG")
-add_executable(${EXECUTABLE_NAME} main.cpp ComponentManager.cpp ComponentManager.h)
+add_executable(${EXECUTABLE_NAME} main.cpp ComponentManager.cpp ComponentManager.h IDrawable.cpp IDrawable.h IUpdatable.cpp IUpdatable.h IComponent.cpp IComponent.h GlobalDefs.h)
 
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})

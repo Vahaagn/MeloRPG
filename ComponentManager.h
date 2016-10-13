@@ -5,16 +5,22 @@
 #ifndef MELORPG_COMPONENTMANAGER_H
 #define MELORPG_COMPONENTMANAGER_H
 
-
-#include <bits/forward_list.h>
+#include <forward_list>
 #include <memory>
+#include <SFML/Graphics/RenderTarget.hpp>
 
-class IComponent;
+
+class IComponent {
+};
 
 class ComponentManager {
+    void addComponent(std::unique_ptr<IComponent>);
+
     std::forward_list<std::unique_ptr<IComponent>> components;
+
     void update();
-    void draw(); // is RenderWindow a global scope??
+
+    void draw(PtrRenderTarget target); // is RenderWindow a global scope??
 };
 
 
