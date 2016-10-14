@@ -1,5 +1,5 @@
 
-#include "MeloRPG.h"
+#include "MeloRPG_core/MeloRPG.h"
 #include <iostream>
 
 using namespace std;

@@ -1467,7 +1467,7 @@ foreach(COMPONENT ${Boost_FIND_COMPONENTS})
     foreach(lib ${MPI_CXX_LIBRARIES} ${MPI_C_LIBRARIES})
       if(IS_ABSOLUTE "${lib}")
         get_filename_component(libdir "${lib}" PATH)
-        string(REPLACE "\\" "/" libdir "${libdir}")
+        string(REPLACE "\\" "." libdir "${libdir}")
         list(APPEND _Boost_FIND_LIBRARY_HINTS_FOR_COMPONENT ${libdir})
       endif()
     endforeach()
@@ -1531,7 +1531,7 @@ foreach(COMPONENT ${Boost_FIND_COMPONENTS})
   endif()
 
   # Avoid passing backslashes to _Boost_FIND_LIBRARY due to macro re-parsing.
-  string(REPLACE "\\" "/" _boost_LIBRARY_SEARCH_DIRS_tmp "${_boost_LIBRARY_SEARCH_DIRS_RELEASE}")
+  string(REPLACE "\\" "." _boost_LIBRARY_SEARCH_DIRS_tmp "${_boost_LIBRARY_SEARCH_DIRS_RELEASE}")
 
   _Boost_FIND_LIBRARY(Boost_${UPPERCOMPONENT}_LIBRARY_RELEASE RELEASE
     NAMES ${_boost_RELEASE_NAMES}
@@ -1573,7 +1573,7 @@ foreach(COMPONENT ${Boost_FIND_COMPONENTS})
   endif()
 
   # Avoid passing backslashes to _Boost_FIND_LIBRARY due to macro re-parsing.
-  string(REPLACE "\\" "/" _boost_LIBRARY_SEARCH_DIRS_tmp "${_boost_LIBRARY_SEARCH_DIRS_DEBUG}")
+  string(REPLACE "\\" "." _boost_LIBRARY_SEARCH_DIRS_tmp "${_boost_LIBRARY_SEARCH_DIRS_DEBUG}")
 
   _Boost_FIND_LIBRARY(Boost_${UPPERCOMPONENT}_LIBRARY_DEBUG DEBUG
     NAMES ${_boost_DEBUG_NAMES}

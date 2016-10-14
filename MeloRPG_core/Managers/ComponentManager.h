@@ -12,11 +12,13 @@
 
 class ComponentManager {
 private:
-    std::forward_list<std::unique_ptr<IComponent>> components;
+    std::forward_list<std::unique_ptr<IComponent>> _components;
 
 public:
-    void addComponent(std::unique_ptr<IComponent>);
-    void update(sf::Time& gameTime);
+    void addComponent(std::unique_ptr<IComponent> component);
+
+    void update(sf::Time &gameTime);
+
     void draw(PtrRenderTarget target); // is RenderWindow a global scope??
 };
 
