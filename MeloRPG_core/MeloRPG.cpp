@@ -20,7 +20,6 @@ void MeloRPG::createWindow(int width, int height, std::string title) {
 void MeloRPG::start() {
     sf::Clock timer;
     sf::Time elapsedTime;
-
     while (_window->isOpen()) {
         elapsedTime = timer.restart();
 
