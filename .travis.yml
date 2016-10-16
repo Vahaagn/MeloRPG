@@ -15,8 +15,6 @@ addons:
     packages:
       - libsfml-dev
       - libsndfile1-dev
-      - libglew1.5
-      - libglew1.5-dev
       - libfreetype6
       - libjpeg-turbo8
       - libjpeg8
@@ -34,7 +32,6 @@ addons:
       - libxcb-randr0-dev
       - libudev-dev
       - libfreetype6-dev
-      - libglew-dev
       - libjpeg8-dev
       - libgpgme11-dev
       - libopenal-dev
