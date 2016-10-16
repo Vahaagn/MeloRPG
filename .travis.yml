@@ -1,0 +1,22 @@
+#addons:
+#    apt:
+#        sources:
+#            - llvm-toolchain-precise
+#            - ubuntu-toolchain-r-test
+#        packages:
+#            - clang-3.7
+#            - g++-5
+#            - gcc-5
+
+language: cpp
+compiler:
+  - gcc
+before_script:
+  - mkdir build
+  - cd build
+  - cmake ..
+script:
+  - make
+  - cd ../bin
+  - ls -la
+#  - ./Simple
