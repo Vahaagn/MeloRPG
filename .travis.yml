@@ -9,12 +9,20 @@
 #            - gcc-5
 
 language: cpp
+
+addons:
+  apt:
+    packages:
+      - libsfml-dev
+
 compiler:
   - gcc
+
 before_script:
   - mkdir build
   - cd build
   - cmake ..
+
 script:
   - make
   - cd ../bin
