@@ -14,6 +14,33 @@ addons:
   apt:
     packages:
       - libsfml-dev
+      - libjpeg62-dev
+      - libsndfile1-dev
+      - libglew1.5
+      - libglew1.5-dev
+      - libfreetype6
+      - libjpeg-turbo8
+      - libjpeg8
+      - libopenal-data
+      - libopenal1
+      - libxrandr2
+      - libxrender1
+      - libsoil1
+      - libpthread-stubs0-dev
+      - libgl1-mesa-dev
+      - libx11-dev
+      - libx11-xcb-dev
+      - libxcb-image0-dev
+      - libxrandr-dev
+      - libxcb-randr0-dev
+      - libudev-dev
+      - libfreetype6-dev
+      - libglew-dev
+      - libjpeg8-dev
+      - libgpgme11-dev
+      - libopenal-dev
+      - libjpeg62
+      - cmake
 
 compiler:
   - gcc
