@@ -44,6 +44,7 @@ compiler:
   - gcc
 
 before_script:
+  - sudo apt-get install libsfml-dev
   - mkdir build
   - cd build
   - cmake ..
