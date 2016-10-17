@@ -30,8 +30,5 @@ void FPSCounter::setFPS() {
 
 FPSCounter::FPSCounter()
         : _counter(0) {
-    std::fstream lol;
-    lol.open("./dupa.txt");
-    testFont.loadFromFile("./goodfoot.ttf");
-
+    testFont.loadFromFile("/home/fotoblysk/git-projects/MeloRPG/goodfoot.ttf");
 }
