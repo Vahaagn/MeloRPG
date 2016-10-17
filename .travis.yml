@@ -23,6 +23,9 @@ language: cpp
 compiler:
   - g++-5
 
+before_install:
+  - pip install --user cpp-coveralls
+
 before_script:
   - mkdir build
   - cd build
@@ -30,4 +33,7 @@ before_script:
   - cmake ..
 
 script:
-  - make
+  - ./configure --enable-gcov && make && make check
+
+after_success:
+  - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
