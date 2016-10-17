@@ -28,7 +28,10 @@ void FPSCounter::setFPS() {
     _fps = _counter;
 }
 
-FPSCounter::FPSCounter()
-        : _counter(0) {
+FPSCounter::FPSCounter() : _counter(0), _fps(0) {
     testFont.loadFromFile("/home/fotoblysk/git-projects/MeloRPG/goodfoot.ttf");
+}
+
+int FPSCounter::get_fps() const {
+    return _fps;
 }

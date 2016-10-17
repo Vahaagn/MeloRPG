@@ -17,11 +17,17 @@ public:
 
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    void setFPS() ;
+    int get_fps() const;
 
 private:
+    void setFPS();
+
     int _counter;
     int _fps;
+public:
+
+
+private:
     sf::Font testFont;
     sf::Time _lastElpsedTime;
 
