@@ -9,9 +9,11 @@ void ComponentManager::addComponent(std::unique_ptr<IComponent> component) {
 }
 
 void ComponentManager::update(sf::Time &gameTime) {
-
+    for(auto &i: _components)
+        i->update(gameTime);
 }
 
 void ComponentManager::draw(PtrRenderTarget target) {
-
+    for(const auto &i: _components)
+        target->draw(*i);
 }

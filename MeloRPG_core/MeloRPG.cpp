@@ -2,6 +2,7 @@
 // Created by matgi on 13.10.2016.
 //
 
+#include <Components/Implementations/FPSCounter.h>
 #include "MeloRPG.h"
 
 MeloRPG::MeloRPG() {
@@ -20,6 +21,7 @@ void MeloRPG::createWindow(int width, int height, std::string title) {
 void MeloRPG::start() {
     sf::Clock timer;
     sf::Time elapsedTime;
+    _componentManager.addComponent(std::unique_ptr<FPSCounter>(new FPSCounter));
     while (_window->isOpen()) {
         elapsedTime = timer.restart();
 
