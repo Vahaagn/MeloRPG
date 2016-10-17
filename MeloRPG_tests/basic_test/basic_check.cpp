@@ -10,3 +10,7 @@ TEST(basic_check, test_eq) {
 TEST(basic_check, test_neq) {
     EXPECT_NE(1, 0);
 }
+
+TEST(basic_check, test_fail) {
+    EXPECT_EQ(1, 0);
+}
