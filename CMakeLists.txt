@@ -22,3 +22,10 @@ add_subdirectory(MeloRPG_core)
 add_subdirectory(MeloRPG_tests)
 
 target_link_libraries(MeloRPG MeloRPG_core)
+
+# Copy the Resources to binary directory
+set(ResourceDir "${CMAKE_SOURCE_DIR}/resources")
+set(ResourceOutDir "${CMAKE_BINARY_DIR}/resources")
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${ResourceDir} ${ResourceOutDir})
