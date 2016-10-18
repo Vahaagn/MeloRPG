@@ -4,6 +4,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <fstream>
+#include <GlobalDefs.h>
 #include "FPSCounter.h"
 
 void FPSCounter::update(sf::Time &elapsedTime) {
@@ -18,7 +19,7 @@ void FPSCounter::update(sf::Time &elapsedTime) {
 
 void FPSCounter::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     std::string tmp = "FPS: ";
-    tmp += std::to_string(_fps);
+    tmp += utils::to_string(_fps);
     sf::Text drawText(tmp, testFont);
     drawText.setPosition(10, 10);
     target.draw(drawText, states);
