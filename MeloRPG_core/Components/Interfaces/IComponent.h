@@ -9,7 +9,7 @@
 #include "IUpdatable.h"
 #include "IDrawable.h"
 
-class IComponent: public IUpdatable, IDrawable {
+class IComponent: public IUpdatable, public IDrawable {
 
 };
 

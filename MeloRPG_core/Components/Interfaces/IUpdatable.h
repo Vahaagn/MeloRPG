@@ -9,6 +9,7 @@
 #include <SFML/System/Time.hpp>
 
 class IUpdatable {
+public:
     virtual void update(sf::Time &elapsedTime)=0;
 };
 
