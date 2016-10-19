@@ -5,32 +5,34 @@
 #ifndef MELORPG_FPSCOUNTER_H
 #define MELORPG_FPSCOUNTER_H
 
-
 #include <Components/Interfaces/IComponent.h>
 #include <SFML/Graphics.hpp>
+
+static const char* FPS_TEXT = "FPS: ";
+static const sf::Time SAMPLE_TIME = sf::seconds(1);
+static const sf::Color TEXT_COLOR = sf::Color::Magenta;
+static const int TEXT_SIZE = 16;
 
 class FPSCounter : public IComponent {
 public:
     FPSCounter();
 
     virtual void update(sf::Time &elapsedTime) override;
-
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    int get_fps() const;
+    int getFps() const;
 
 private:
-    void setFPS();
+    void updateText();
 
-    int _counter;
-    int _fps;
-public:
+    int _fpsCounter;
+    int _lastFps;
 
+    sf::Font _textFont;
+    sf::Text _drawableText;
+    sf::Time _summarizedTime;
 
-private:
-    sf::Font testFont;
-    sf::Time _lastElpsedTime;
-
+    void initializeText();
 };
 
 

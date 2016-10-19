@@ -3,36 +3,43 @@
 //
 
 #include <SFML/Graphics.hpp>
-#include <fstream>
 #include <GlobalDefs.h>
 #include "FPSCounter.h"
 
+FPSCounter::FPSCounter() : _fpsCounter(0), _lastFps(0) {
+    _textFont.loadFromFile("resources/OpenSans-Regular.ttf");
+    initializeText();
+}
+
+void FPSCounter::initializeText() {
+    _drawableText.setString(FPS_TEXT);
+    _drawableText.setFont(_textFont);
+    _drawableText.setPosition(0, 0);
+    _drawableText.setFillColor(TEXT_COLOR);
+    _drawableText.setOutlineColor(sf::Color::Black);
+    _drawableText.setCharacterSize(TEXT_SIZE);
+}
+
 void FPSCounter::update(sf::Time &elapsedTime) {
-    _lastElpsedTime += elapsedTime;
-    ++_counter;
-    if (_lastElpsedTime >= sf::seconds(1)) {
-        _lastElpsedTime -= sf::seconds(1);
-        setFPS();
-        _counter = 0;
+    _summarizedTime += elapsedTime;
+    ++_fpsCounter;
+
+    if (_summarizedTime >= SAMPLE_TIME) {
+        _summarizedTime -= SAMPLE_TIME;
+        updateText();
+        _fpsCounter = 0;
     }
 }
 
 void FPSCounter::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    std::string tmp = "FPS: ";
-    tmp += utils::to_string(_fps);
-    sf::Text drawText(tmp, testFont);
-    drawText.setPosition(10, 10);
-    target.draw(drawText, states);
+    target.draw(_drawableText, states);
 }
 
-void FPSCounter::setFPS() {
-    _fps = _counter;
+void FPSCounter::updateText() {
+    _lastFps = _fpsCounter;
+    _drawableText.setString(FPS_TEXT + utils::to_string(_lastFps));
 }
 
-FPSCounter::FPSCounter() : _counter(0), _fps(0) {
-    testFont.loadFromFile("resources/OpenSans-Regular.ttf");
-}
-
-int FPSCounter::get_fps() const {
-    return _fps;
+int FPSCounter::getFps() const {
+    return _lastFps;
 }
