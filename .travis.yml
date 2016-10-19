@@ -16,7 +16,9 @@ addons:
             - clang-3.7
             - g++-5
             - gcc-5
-            - libsfml-dev
+#            - libsfml-dev
+            - libxcb-image0
+            - libxcb-image0-dev
 
 language: cpp
 
