@@ -5,7 +5,11 @@ dist: trusty
 cache:
   apt: true
 
-env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
+env:
+  global:
+    - COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
+    - SFML_ROOT=/sfml
+    - LD_LIBRARY_PATH=/sfml/lib
 
 addons:
     apt:
@@ -16,7 +20,6 @@ addons:
             - clang-3.7
             - g++-5
             - gcc-5
-#            - libsfml-dev
             - libxcb-image0
             - libxcb-image0-dev
 
@@ -27,12 +30,12 @@ compiler:
 
 before_install:
   - pip install --user cpp-coveralls
-  - sudo apt-get purge --auto-remove libsfml-dev
 
 before_script:
   - wget http://www.sfml-dev.org/files/SFML-2.4.0-linux-gcc-64-bit.tar.gz -O /tmp/sfml.tar.gz
   - tar -xxvf /tmp/sfml.tar.gz
-  - sudo cp -r SFML-2.4.0/* /usr/
+  - sudo mkdir /sfml
+  - sudo cp -r SFML-2.4.0/* /sfml/
   - sudo apt-get install -y libjpeg62-dev libsndfile1-dev libglew1.5 libglew1.5-dev libfreetype6 libjpeg-turbo8 libjpeg8 libopenal-data libopenal1  libxrandr2 libxrender1 libsoil1
   - mkdir build
   - cd build
