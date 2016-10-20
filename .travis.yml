@@ -33,7 +33,7 @@ before_install:
 
 before_script:
   - sudo mkdir ~/sfml_install
-  - wget https://raw.githubusercontent.com/xmaayy/SFMLinstall/master/SFMLins -O ~/sfml_install/script
+  - sudo wget https://raw.githubusercontent.com/xmaayy/SFMLinstall/master/SFMLins -O ~/sfml_install/script
   - sudo chmod +x ~/sfml_install/script && cd ~/sfml_install && sh ./script
 #  - wget http://www.sfml-dev.org/files/SFML-2.4.0-linux-gcc-64-bit.tar.gz -O /tmp/sfml.tar.gz
 #  - tar -xxvf /tmp/sfml.tar.gz
