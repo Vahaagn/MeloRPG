@@ -32,8 +32,8 @@ before_install:
   - pip install --user cpp-coveralls
 
 before_script:
-  - ls -la && echo $pwd
-  - export CURR_DIR=$pwd
+  - ls -la && echo pwd
+  - export CURR_DIR=pwd
 #  - sudo mkdir ~/sfml_install
 #  - sudo wget https://raw.githubusercontent.com/xmaayy/SFMLinstall/master/SFMLins -O ~/sfml_install/script
 #  - sudo chmod +x ~/sfml_install/script && cd ~/sfml_install && sudo sh ./script
@@ -42,7 +42,7 @@ before_script:
 #  - sudo mkdir /sfml
 #  - sudo cp -r SFML-2.4.0/* /sfml/
 #  - sudo apt-get install -y libjpeg62-dev libsndfile1-dev libglew1.5 libglew1.5-dev libfreetype6 libjpeg-turbo8 libjpeg8 libopenal-data libopenal1  libxrandr2 libxrender1 libsoil1
-  - cd $CURR_DIR/Vahaagn/MeloRPG
+  - cd $CURR_DIR && cd Vahaagn/MeloRPG
   - mkdir buildMelo
   - cd buildMelo
   - export COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
