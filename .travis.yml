@@ -32,10 +32,11 @@ before_install:
   - pip install --user cpp-coveralls
 
 before_script:
+  - ls -la && echo $pwd
   - export CURR_DIR=$pwd
-  - sudo mkdir ~/sfml_install
-  - sudo wget https://raw.githubusercontent.com/xmaayy/SFMLinstall/master/SFMLins -O ~/sfml_install/script
-  - sudo chmod +x ~/sfml_install/script && cd ~/sfml_install && sudo sh ./script
+#  - sudo mkdir ~/sfml_install
+#  - sudo wget https://raw.githubusercontent.com/xmaayy/SFMLinstall/master/SFMLins -O ~/sfml_install/script
+#  - sudo chmod +x ~/sfml_install/script && cd ~/sfml_install && sudo sh ./script
 #  - wget http://www.sfml-dev.org/files/SFML-2.4.0-linux-gcc-64-bit.tar.gz -O /tmp/sfml.tar.gz
 #  - tar -xxvf /tmp/sfml.tar.gz
 #  - sudo mkdir /sfml
