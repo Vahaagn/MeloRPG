@@ -23,6 +23,11 @@ add_subdirectory(MeloRPG_tests)
 
 target_link_libraries(MeloRPG MeloRPG_core)
 
+# Test code
+include(CTest)
+enable_testing()
+add_test(unit ${PROJECT_BINARY_DIR}/unit_tests)
+
 # Copy the Resources to binary directory
 set(ResourceDir "${CMAKE_SOURCE_DIR}/resources")
 set(ResourceOutDir "${CMAKE_BINARY_DIR}/resources")
