@@ -30,7 +30,3 @@ TEST(basic_check, test_FPSCounter_value) {
     fps = fpsCounter.getFps();
     EXPECT_EQ(fps, 10000);
 }
-
-TEST(basic_check, test_fail) {
-    EXPECT_EQ(1, 0);
-}
