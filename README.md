@@ -10,9 +10,9 @@
 ***
 ### Build statuses (WIP)
 
-![Build status](http://89.40.126.93:443/app/rest/builds/buildType:(id:MeloRPG_dev)/statusIcon)
+[![Build status](http://89.40.126.93:443/app/rest/builds/buildType:(id:MeloRPG_dev)/statusIcon)](http://89.40.126.93:443/viewLog.html?buildTypeId=MeloRPG_Dev&buildId=lastFinished)
 
-![FF](https://img.shields.io/teamcity/http/89.40.126.93:443/s/MeloRPG_dev.svg?style=flat)
+[![Build status](https://img.shields.io/teamcity/http/89.40.126.93:443/s/MeloRPG_dev.svg?style=flat)](http://89.40.126.93:443/viewLog.html?buildTypeId=MeloRPG_Dev&buildId=lastFinished)
 
 ##### Add tests statuses
 ***
