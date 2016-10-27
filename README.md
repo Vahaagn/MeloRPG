@@ -10,9 +10,9 @@
 ***
 ### Build statuses (WIP)
 
-![Build status](http://89.40.126.93:443/app/rest/builds/buildType:(id:MeloRPG_Master)/statusIcon)
+![Build status](http://89.40.126.93:443/app/rest/builds/buildType:(id:MeloRPG_dev)/statusIcon)
 
-![FF](https://img.shields.io/teamcity/http/89.40.126.93:443/s/MeloRPG_Master.svg?style=flat)
+![FF](https://img.shields.io/teamcity/http/89.40.126.93:443/s/MeloRPG_dev.svg?style=flat)
 
 ##### Add tests statuses
 ***
