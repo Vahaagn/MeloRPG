@@ -34,3 +34,11 @@ set(ResourceOutDir "${CMAKE_BINARY_DIR}/resources")
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${ResourceDir} ${ResourceOutDir})
+
+if (SFML_FOUND AND ${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+    set(SFML_BIN "${SFML_INCLUDE_DIR}/../bin")
+    set(BIN_OUTPUT "${CMAKE_BINARY_DIR}")
+    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${SFML_BIN} ${BIN_OUTPUT})
+endif()
