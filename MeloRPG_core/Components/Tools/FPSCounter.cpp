@@ -20,7 +20,7 @@ void FPSCounter::initializeText() {
     _drawableText.setCharacterSize(TEXT_SIZE);
 }
 
-void FPSCounter::update(sf::Time &elapsedTime) {
+void FPSCounter::update(sf::Time &elapsedTime, std::vector<sf::Event>& events) {
     _summarizedTime += elapsedTime;
     ++_fpsCounter;
 

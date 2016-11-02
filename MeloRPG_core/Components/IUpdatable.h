@@ -10,7 +10,7 @@
 
 class IUpdatable {
 public:
-    virtual void update(sf::Time &elapsedTime)=0;
+    virtual void update(sf::Time &elapsedTime, std::vector<sf::Event> &events) = 0;
 };
 
 

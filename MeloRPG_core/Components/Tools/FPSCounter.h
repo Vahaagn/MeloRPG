@@ -5,7 +5,7 @@
 #ifndef MELORPG_FPSCOUNTER_H
 #define MELORPG_FPSCOUNTER_H
 
-#include <Components/Interfaces/IComponent.h>
+#include <Components/IComponent.h>
 #include <SFML/Graphics.hpp>
 
 static const char* FPS_TEXT = "FPS: ";
@@ -17,7 +17,7 @@ class FPSCounter : public IComponent {
 public:
     FPSCounter();
 
-    virtual void update(sf::Time &elapsedTime) override;
+    virtual void update(sf::Time &elapsedTime, std::vector<sf::Event>& events) override;
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
     int getFps() const;

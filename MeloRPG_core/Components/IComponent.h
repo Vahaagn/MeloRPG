@@ -5,6 +5,7 @@
 #ifndef MELORPG_ICOMPONENT_H
 #define MELORPG_ICOMPONENT_H
 
+#include "../GlobalDefs.h"
 
 #include "IUpdatable.h"
 #include "IDrawable.h"

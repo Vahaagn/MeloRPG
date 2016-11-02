@@ -6,9 +6,8 @@
 #define MELORPG_COMPONENTMANAGER_H
 
 #include <forward_list>
-#include <SFML/Graphics.hpp>
 #include "../GlobalDefs.h"
-#include "../Components/Interfaces/IComponent.h"
+#include "Components/IComponent.h"
 
 class ComponentManager {
 private:
@@ -17,7 +16,7 @@ private:
 public:
     void addComponent(std::unique_ptr<IComponent> component);
 
-    void update(sf::Time &gameTime);
+    void update(sf::Time &gameTime, std::vector<sf::Event>& events);
 
     void draw(PtrRenderTarget target); // is RenderWindow a global scope??
 };

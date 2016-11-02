@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <Components/Implementations/FPSCounter.h>
+#include <Components/Tools/FPSCounter.h>
 
 //
 // Created by fotoblysk on 14.10.16.
