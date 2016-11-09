@@ -1,0 +1,5 @@
+<map id="IActor" name="IActor">
+<area shape="rect" id="node2" href="$class_i_component.html" title="IComponent" alt="" coords="55,155,148,181"/>
+<area shape="rect" id="node3" href="$class_i_updatable.html" title="IUpdatable" alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node4" href="$class_i_drawable.html" title="IDrawable" alt="" coords="115,80,197,107"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IDrawable" name="IDrawable">
+<area shape="rect" id="node3" href="$class_i_component.html" title="IComponent" alt="" coords="55,155,149,181"/>
+<area shape="rect" id="node4" href="$class_f_p_s_counter.html" title="FPSCounter" alt="" coords="5,229,100,256"/>
+<area shape="rect" id="node5" href="$class_i_actor.html" title="IActor" alt="" coords="124,229,181,256"/>
+<area shape="rect" id="node6" href="$class_actor.html" title="Actor" alt="" coords="126,304,179,331"/>
+<area shape="rect" id="node7" href="$class_player.html" title="Player" alt="" coords="123,379,182,405"/>
+</map>

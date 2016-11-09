@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$class_i_drawable.html" title="IDrawable" alt="" coords="133,5,214,32"/>
+<area shape="rect" id="node3" href="$class_i_component.html" title="IComponent" alt="" coords="264,31,357,57"/>
+<area shape="rect" id="node4" href="$class_f_p_s_counter.html" title="FPSCounter" alt="" coords="405,5,500,32"/>
+<area shape="rect" id="node5" href="$class_i_actor.html" title="IActor" alt="" coords="424,56,481,83"/>
+<area shape="rect" id="node6" href="$class_actor.html" title="Actor" alt="" coords="548,56,601,83"/>
+<area shape="rect" id="node7" href="$class_player.html" title="Player" alt="" coords="649,56,708,83"/>
+<area shape="rect" id="node8" href="$class_i_updatable.html" title="IUpdatable" alt="" coords="131,56,216,83"/>
+</map>

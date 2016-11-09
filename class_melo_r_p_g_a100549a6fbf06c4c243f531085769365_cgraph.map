@@ -1,0 +1,7 @@
+<map id="MeloRPG::start" name="MeloRPG::start">
+<area shape="rect" id="node2" href="$class_component_manager.html#ab62bf0c3aaa1c6872eb3c1156fcf0e45" title="ComponentManager::addComponent" alt="" coords="167,5,401,32"/>
+<area shape="rect" id="node3" href="$class_melo_r_p_g.html#a3c01a6bcb79f4e662c6ceb017fc1c57d" title="MeloRPG::update" alt="" coords="221,56,347,83"/>
+<area shape="rect" id="node5" href="$class_melo_r_p_g.html#ac90e81fad59a10f97d7e0b46c1808fb1" title="MeloRPG::draw" alt="" coords="227,107,341,133"/>
+<area shape="rect" id="node4" href="$class_component_manager.html#a6e56fec7efa9670e5ee4039dbc2ed883" title="ComponentManager::update" alt="" coords="449,56,636,83"/>
+<area shape="rect" id="node6" href="$class_component_manager.html#ada01de353f3665835045c70e1450dd84" title="ComponentManager::draw" alt="" coords="455,107,630,133"/>
+</map>
