@@ -3,6 +3,7 @@
 //
 
 #include "Player.h"
+#define DefaultPlayerSpeed 2.f
 
 Player::Player() : Actor::Actor(new sf::Vector2f) {
 
@@ -16,17 +17,17 @@ void Player::update(sf::Time &elapsedTime, std::vector<sf::Event>& events) {
 
     for (auto event : events) {
         if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::D) {
-           acceleration.x += 2.f;
+           acceleration.x += DefaultPlayerSpeed;
         }
         if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::A) {
-            acceleration.x += -2.f;
+            acceleration.x += -DefaultPlayerSpeed;
         }
 
         if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::W) {
-            acceleration.y += -2.f;
+            acceleration.y += -DefaultPlayerSpeed;
         }
         if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::S) {
-            acceleration.y += 2.f;
+            acceleration.y += DefaultPlayerSpeed;
         }
     }
 
