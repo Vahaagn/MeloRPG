@@ -3,7 +3,8 @@
 //
 
 #include "Player.h"
-#define DefaultPlayerSpeed 2.f
+
+#define DEFAULT_PLAYER_SPEED 300.f
 
 Player::Player() : Actor::Actor(new sf::Vector2f) {
 
@@ -12,25 +13,24 @@ Player::Player() : Actor::Actor(new sf::Vector2f) {
 Player::~Player() {
 }
 
-void Player::update(sf::Time &elapsedTime, std::vector<sf::Event>& events) {
+void Player::update(sf::Time &elapsedTime, std::vector<sf::Event> &events) {
     sf::Vector2f acceleration(0.F, 0.F);
 
-    for (auto event : events) {
-        if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::D) {
-           acceleration.x += DefaultPlayerSpeed;
-        }
-        if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::A) {
-            acceleration.x += -DefaultPlayerSpeed;
-        }
-
-        if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::W) {
-            acceleration.y += -DefaultPlayerSpeed;
-        }
-        if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::S) {
-            acceleration.y += DefaultPlayerSpeed;
-        }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+        acceleration.x += DEFAULT_PLAYER_SPEED;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+        acceleration.x += -DEFAULT_PLAYER_SPEED;
     }
 
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+        acceleration.y += -DEFAULT_PLAYER_SPEED;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+        acceleration.y += DEFAULT_PLAYER_SPEED;
+    }
+    acceleration.x*=elapsedTime.asSeconds();
+    acceleration.y*=elapsedTime.asSeconds();
     moveBy(acceleration);
 }
 
