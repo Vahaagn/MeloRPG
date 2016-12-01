@@ -33,7 +33,7 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "MeloRPG_core")
-add_library(${EXECUTABLE_NAME} MeloRPG.cpp MeloRPG.h Managers/ComponentManager.cpp Managers/ComponentManager.h Components/IDrawable.h Components/IUpdatable.h Components/IComponent.h GlobalDefs.h Components/Tools/FPSCounter.cpp Components/Tools/FPSCounter.h Utils/StdPatch.h Components/Characters/IActor.h Components/Characters/Player.cpp Components/Characters/Player.h Components/Characters/Actor.cpp Components/Characters/Actor.h)
+add_library(${EXECUTABLE_NAME} MeloRPG.cpp MeloRPG.h Managers/ComponentManager.cpp Managers/ComponentManager.h Components/IDrawable.h Components/IUpdatable.h Components/IComponent.h GlobalDefs.h Components/Tools/FPSCounter.cpp Components/Tools/FPSCounter.h Utils/StdPatch.h Components/Characters/IActor.h Components/Characters/Player.cpp Components/Characters/Player.h Components/Characters/Actor.cpp Components/Characters/Actor.h Components/Commands/ICommand.cpp Components/Commands/ICommand.h Components/InputHandler.cpp Components/InputHandler.h Components/Commands/MoveActorCommand.cpp Components/Commands/MoveActorCommand.h Utils/mathForSFML.h)
 
 
 # Detect and add SFML

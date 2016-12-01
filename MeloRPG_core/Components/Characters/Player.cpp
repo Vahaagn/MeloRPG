@@ -29,8 +29,8 @@ void Player::update(sf::Time &elapsedTime, std::vector<sf::Event> &events) {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
         acceleration.y += DEFAULT_PLAYER_SPEED;
     }
-    acceleration.x*=elapsedTime.asSeconds();
-    acceleration.y*=elapsedTime.asSeconds();
+    acceleration.x *= elapsedTime.asSeconds();
+    acceleration.y *= elapsedTime.asSeconds();
     moveBy(acceleration);
 }
 
