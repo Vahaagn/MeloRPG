@@ -99,3 +99,4 @@ fabric.properties
 # Custom ignores
 .idea/
 *~
+cmake-build-debug
