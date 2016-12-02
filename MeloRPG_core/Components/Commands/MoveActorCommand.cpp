@@ -3,7 +3,6 @@
 //
 
 #include <SFML/Audio.hpp>
-#include <iostream>
 #include "MoveActorCommand.h"
 
 
@@ -22,5 +21,4 @@ MoveActorCommand::MoveActorCommand(Direction direction, std::shared_ptr<IMovable
 
 void MoveActorCommand::execute() {
     _actor->changeNextMove(_moveVector);
-    std::cout << "Moving actor" << std::endl;
 }

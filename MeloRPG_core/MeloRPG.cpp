@@ -20,12 +20,14 @@ void MeloRPG::createWindow(int width, int height, std::string title) {
     sf::VideoMode videoMode(width, height);
     _window = std::shared_ptr<sf::RenderWindow>(new sf::RenderWindow(videoMode, title));
 }
-void MeloRPG::addMoveCommands(std::shared_ptr<IMovable> player_tmp){
-    handler.addCommand(std::unique_ptr<ICommand>(new MoveActorCommand(Direction::Up, player_tmp)), sf::Keyboard::W);
-    handler.addCommand(std::unique_ptr<ICommand>(new MoveActorCommand(Direction::Down, player_tmp)), sf::Keyboard::S);
-    handler.addCommand(std::unique_ptr<ICommand>(new MoveActorCommand(Direction::Left, player_tmp)), sf::Keyboard::A);
-    handler.addCommand(std::unique_ptr<ICommand>(new MoveActorCommand(Direction::Right, player_tmp)), sf::Keyboard::D);
+
+void MeloRPG::addMoveCommands(std::shared_ptr<IMovable> player_tmp) {
+    handler.addCommand(std::shared_ptr<ICommand>(new MoveActorCommand(Direction::Up, player_tmp)), sf::Keyboard::W);
+    handler.addCommand(std::shared_ptr<ICommand>(new MoveActorCommand(Direction::Down, player_tmp)), sf::Keyboard::S);
+    handler.addCommand(std::shared_ptr<ICommand>(new MoveActorCommand(Direction::Left, player_tmp)), sf::Keyboard::A);
+    handler.addCommand(std::shared_ptr<ICommand>(new MoveActorCommand(Direction::Right, player_tmp)), sf::Keyboard::D);
 }
+
 void MeloRPG::start() {
     sf::Clock timer;
     sf::Time elapsedTime;
@@ -51,7 +53,7 @@ void MeloRPG::update(sf::Time &game_time) {
             events.push_back(event);
         }
     }
-    ICommand *currentCommand = handler.handleInput();
+    std::shared_ptr<ICommand> currentCommand(handler.handleInput());
     if (currentCommand != nullptr)
         currentCommand->execute();
     _componentManager.update(game_time, events);
