@@ -1,0 +1,3 @@
+[submodule "MeloRPG_tests/lib/googletest"]
+	path = MeloRPG_tests/lib/googletest
+	url = https://github.com/google/googletest.git

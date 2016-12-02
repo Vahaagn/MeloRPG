@@ -1,39 +1,12 @@
-#cmake_minimum_required(VERSION 3.6)
-#project(MeloRPG)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
-#set(SOURCE_FILES main.cpp)
-#add_executable(MeloRPG ${SOURCE_FILES})
-
-#Change this if you need to target a specific CMake version
-cmake_minimum_required(VERSION 2.6)
-
-
-# Enable debug symbols by default
-# must be done before project() statement
-if (NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
-endif ()
-# (you can also set it on the command line: -D CMAKE_BUILD_TYPE=Release)
-
+cmake_minimum_required(VERSION 2.8.4)
 project(MeloRPG)
 
-# Set version information in a config.h file
-set(VauxGame_VERSION_MAJOR 1)
-set(VauxGame_VERSION_MINOR 0)
-configure_file(
-        "${PROJECT_SOURCE_DIR}/config.h.in"
-        "${PROJECT_BINARY_DIR}/config.h"
-)
-include_directories("${PROJECT_BINARY_DIR}")
 
-# Define sources and executable
-set(EXECUTABLE_NAME "MeloRPG")
-add_executable(${EXECUTABLE_NAME} main.cpp)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(SOURCE_FILES main.cpp)
+add_executable(MeloRPG ${SOURCE_FILES})
+
+include_directories(MeloRPG_core)
 
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
@@ -42,15 +15,30 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
 find_package(SFML 2 REQUIRED system window graphics network audio)
 if (SFML_FOUND)
     include_directories(${SFML_INCLUDE_DIR})
-    target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES})
+    target_link_libraries(MeloRPG ${SFML_LIBRARIES})
 endif ()
 
-# Install target
-install(TARGETS ${EXECUTABLE_NAME} DESTINATION bin)
+add_subdirectory(MeloRPG_core)
+add_subdirectory(MeloRPG_tests)
 
-# CPack packaging
-include(InstallRequiredSystemLibraries)
-set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE")
-set(CPACK_PACKAGE_VERSION_MAJOR "${MeloRPG_VERSION_MAJOR}")
-set(CPACK_PACKAGE_VERSION_MINOR "${MeloRPG_VERSION_MINOR}")
-include(CPack)
+target_link_libraries(MeloRPG MeloRPG_core)
+
+# Test code
+include(CTest)
+enable_testing()
+add_test(unit ${PROJECT_BINARY_DIR}/unit_tests)
+
+# Copy the Resources to binary directory
+set(ResourceDir "${CMAKE_SOURCE_DIR}/resources")
+set(ResourceOutDir "${CMAKE_BINARY_DIR}/resources")
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${ResourceDir} ${ResourceOutDir})
+
+if (SFML_FOUND AND ${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+    set(SFML_BIN "${SFML_INCLUDE_DIR}/../bin")
+    set(BIN_OUTPUT "${CMAKE_BINARY_DIR}")
+    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${SFML_BIN} ${BIN_OUTPUT})
+endif()

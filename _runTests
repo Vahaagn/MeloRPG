@@ -1,0 +1,2 @@
+cd build
+MeloRPG_tests/basic_test/runBasicGameTest --gtest_output="xml:test_results.xml"
