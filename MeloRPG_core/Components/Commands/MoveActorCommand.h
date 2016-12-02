@@ -6,19 +6,20 @@
 #define MELORPG_MOVEACTORCOMMAND_H
 
 
+#include <Components/Characters/IActor.h>
+#include <Utils/Direction.h>
 #include "ICommand.h"
 
-enum Direction{Up=0b1, Down=0b10, Left=0b100, Right=0b1000};
 
-class MoveActorCommand : public ICommand{
+class MoveActorCommand : public ICommand {
 public:
 private:
-    void execute() override;
-
-public:
-    MoveActorCommand(Direction direction);
-
     sf::Vector2f _moveVector;
+    std::shared_ptr<IMovable> _actor;
+public:
+    MoveActorCommand(Direction direction, std::shared_ptr<IMovable> actor);
+
+    void execute() override;
 };
 
 

@@ -3,22 +3,24 @@
 //
 
 #include <SFML/Audio.hpp>
+#include <iostream>
 #include "MoveActorCommand.h"
 
-#define DEFAULT_PLAYER_SPEED 300.f
 
-MoveActorCommand::MoveActorCommand(Direction direction) {
-    sf::Vector2f _moveVector(0, 0);
-    if (direction & Direction::Up)
-        _moveVector.y = DEFAULT_PLAYER_SPEED;
+MoveActorCommand::MoveActorCommand(Direction direction, std::shared_ptr<IMovable> actor) : _actor(actor) {
+    _moveVector.x = 0;
+    _moveVector.y = 0;
+    if (direction & Direction::Up && !(direction & Direction::Down))
+        _moveVector.y = -1;
     else if (direction & Direction::Down)
-        _moveVector.y = -DEFAULT_PLAYER_SPEED;
-    if (direction & Direction::Right)
-        _moveVector.x = DEFAULT_PLAYER_SPEED;
+        _moveVector.y = 1;
+    if (direction & Direction::Right && !(direction & Direction::Left))
+        _moveVector.x = 1;
     else if (direction & Direction::Left)
-        _moveVector.x = -DEFAULT_PLAYER_SPEED;
+        _moveVector.x = -1;
 }
 
 void MoveActorCommand::execute() {
-
+    _actor->changeNextMove(_moveVector);
+    std::cout << "Moving actor" << std::endl;
 }
