@@ -11,7 +11,13 @@
 class InputHandler {
 public:
     InputHandler();
-    ICommand* handleInput();
+
+    void addCommand(std::unique_ptr<ICommand>, sf::Keyboard::Key name);      //TODO add change key feature
+    std::map<sf::Keyboard::Key, std::unique_ptr<ICommand>> _commands;
+
+    ~InputHandler();
+
+    ICommand* handleInput();                //TODO fix to shared pointers returning unique_ptr is bad
 };
 
 

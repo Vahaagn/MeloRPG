@@ -9,6 +9,7 @@
 #include "GlobalDefs.h"
 #include "Managers/ComponentManager.h"
 #include <SFML/Graphics.hpp>
+#include "Components/InputHandler.h"
 
 class MeloRPG {
 private:
@@ -24,8 +25,11 @@ public:
     void start();
 
 private:
+    InputHandler handler;
     void update(sf::Time& game_time);
     void draw();
+
+    void addMoveCommands(std::shared_ptr<IMovable> player);
 };
 
 

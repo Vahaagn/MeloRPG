@@ -12,11 +12,13 @@ public:
     Player();
     virtual ~Player();
 
-public:
     virtual void update(sf::Time &elapsedTime, std::vector<sf::Event>& events) override;
-
+private:
+    void changeNextMove(sf::Vector2f f) override;
 protected:
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+
+    sf::Vector2f _acceleration;
 };
 
 

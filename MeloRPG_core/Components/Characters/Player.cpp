@@ -14,24 +14,12 @@ Player::~Player() {
 }
 
 void Player::update(sf::Time &elapsedTime, std::vector<sf::Event> &events) {
-    sf::Vector2f acceleration(0.F, 0.F);
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        acceleration.x += DEFAULT_PLAYER_SPEED;
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        acceleration.x += -DEFAULT_PLAYER_SPEED;
-    }
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        acceleration.y += -DEFAULT_PLAYER_SPEED;
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        acceleration.y += DEFAULT_PLAYER_SPEED;
-    }
-    acceleration.x *= elapsedTime.asSeconds();
-    acceleration.y *= elapsedTime.asSeconds();
-    moveBy(acceleration);
+    sf::Vector2f loopMove(0.F, 0.F);
+    loopMove.x = _acceleration.x * elapsedTime.asSeconds();
+    loopMove.y = _acceleration.y * elapsedTime.asSeconds();
+    _acceleration.x = 0;
+    _acceleration.y = 0;
+    moveBy(loopMove);
 }
 
 void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -42,3 +30,10 @@ void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
     target.draw(rect, states);
 }
+
+void Player::changeNextMove(sf::Vector2f f) {
+    _acceleration.x = f.x * DEFAULT_PLAYER_SPEED;
+    _acceleration.y = f.y * DEFAULT_PLAYER_SPEED;
+}
+
+
