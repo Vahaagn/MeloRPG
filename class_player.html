@@ -87,6 +87,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_player-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Player Class Reference</div>  </div>
@@ -99,11 +101,12 @@ Inheritance diagram for Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player__inherit__graph.png" border="0" usemap="#_player_inherit__map" alt="Inheritance graph"/></div>
 <map name="_player_inherit__map" id="_player_inherit__map">
-<area shape="rect" id="node2" href="class_actor.html" title="Actor" alt="" coords="75,304,128,331"/>
-<area shape="rect" id="node3" href="class_i_actor.html" title="IActor" alt="" coords="73,229,130,256"/>
+<area shape="rect" id="node2" href="class_actor.html" title="Actor" alt="" coords="128,304,181,331"/>
+<area shape="rect" id="node3" href="class_i_actor.html" title="IActor" alt="" coords="126,229,183,256"/>
 <area shape="rect" id="node4" href="class_i_component.html" title="IComponent" alt="" coords="55,155,148,181"/>
 <area shape="rect" id="node5" href="class_i_updatable.html" title="IUpdatable" alt="" coords="5,80,91,107"/>
 <area shape="rect" id="node6" href="class_i_drawable.html" title="IDrawable" alt="" coords="115,80,197,107"/>
+<area shape="rect" id="node8" href="class_i_movable.html" title="IMovable" alt="" coords="172,155,247,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -111,11 +114,12 @@ Collaboration diagram for Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player__coll__graph.png" border="0" usemap="#_player_coll__map" alt="Collaboration graph"/></div>
 <map name="_player_coll__map" id="_player_coll__map">
-<area shape="rect" id="node2" href="class_actor.html" title="Actor" alt="" coords="75,304,128,331"/>
-<area shape="rect" id="node3" href="class_i_actor.html" title="IActor" alt="" coords="73,229,130,256"/>
+<area shape="rect" id="node2" href="class_actor.html" title="Actor" alt="" coords="128,304,181,331"/>
+<area shape="rect" id="node3" href="class_i_actor.html" title="IActor" alt="" coords="126,229,183,256"/>
 <area shape="rect" id="node4" href="class_i_component.html" title="IComponent" alt="" coords="55,155,148,181"/>
 <area shape="rect" id="node5" href="class_i_updatable.html" title="IUpdatable" alt="" coords="5,80,91,107"/>
 <area shape="rect" id="node6" href="class_i_drawable.html" title="IDrawable" alt="" coords="115,80,197,107"/>
+<area shape="rect" id="node8" href="class_i_movable.html" title="IMovable" alt="" coords="172,155,247,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -144,6 +148,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="inherit_header pro_methods_class_actor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_actor')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_actor.html">Actor</a></td></tr>
 <tr class="memitem:ad807fe8f85e72ab263a0c05e3231cb39 inherit pro_methods_class_actor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#ad807fe8f85e72ab263a0c05e3231cb39">~Actor</a> ()</td></tr>
 <tr class="separator:ad807fe8f85e72ab263a0c05e3231cb39 inherit pro_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:af19fac6c47a6164f9f7054144b918734"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af19fac6c47a6164f9f7054144b918734">_acceleration</a></td></tr>
+<tr class="separator:af19fac6c47a6164f9f7054144b918734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7564ad2d88915d200da2c64a7eb2a605"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7564ad2d88915d200da2c64a7eb2a605">changeNextMove</a> (sf::Vector2f f) override</td></tr>
+<tr class="separator:a7564ad2d88915d200da2c64a7eb2a605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="affe0cc3cb714f6deb4e62f0c0d3f1fd8"></a>
@@ -185,6 +199,32 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7564ad2d88915d200da2c64a7eb2a605"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::changeNextMove </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_i_movable.html#a776ced4323a417c289ab467606d48fab">IMovable</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0ca934f76860c378cd991a8a32f27edd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -275,6 +315,27 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="af19fac6c47a6164f9f7054144b918734"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f Player::_acceleration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_player_8h_source.html">Player.h</a></li>
 <li><a class="el" href="_player_8cpp.html">Player.cpp</a></li>
@@ -282,7 +343,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 9 2016 13:16:01 for MeloRPG by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 2 2016 08:37:12 for MeloRPG by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

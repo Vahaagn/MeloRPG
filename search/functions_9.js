@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['to_5fstring',['to_string',['../namespaceutils.html#afaa6b473344c4963207c101e82913fc6',1,'utils']]]
+  ['player',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player']]]
 ];

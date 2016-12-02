@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['start',['start',['../class_melo_r_p_g.html#a100549a6fbf06c4c243f531085769365',1,'MeloRPG']]]
+  ['melorpg',['MeloRPG',['../class_melo_r_p_g.html#a03f2bbdf7d31178d34301febfda82a31',1,'MeloRPG']]],
+  ['moveactorcommand',['MoveActorCommand',['../class_move_actor_command.html#ade172f3afd33109f6eca944a075a1d5d',1,'MoveActorCommand']]],
+  ['moveby',['moveBy',['../class_actor.html#ab0bd18427eeffe998f71d801cafb3dcd',1,'Actor::moveBy()'],['../class_i_actor.html#ac21f18e45687ac8e8c47408b602ffa53',1,'IActor::moveBy()']]],
+  ['moveto',['moveTo',['../class_actor.html#a9fb620beec4387d9637f5823c3b4c38a',1,'Actor::moveTo()'],['../class_i_actor.html#a84d6331874a6904c41d47bfdd7f69f51',1,'IActor::moveTo()']]]
 ];

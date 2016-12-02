@@ -100,7 +100,8 @@ Collaboration diagram for MeloRPG:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_melo_r_p_g__coll__graph.png" border="0" usemap="#_melo_r_p_g_coll__map" alt="Collaboration graph"/></div>
 <map name="_melo_r_p_g_coll__map" id="_melo_r_p_g_coll__map">
-<area shape="rect" id="node2" href="class_component_manager.html" title="ComponentManager" alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="class_input_handler.html" title="InputHandler" alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node3" href="class_component_manager.html" title="ComponentManager" alt="" coords="125,5,264,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -121,6 +122,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a3c01a6bcb79f4e662c6ceb017fc1c57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90e81fad59a10f97d7e0b46c1808fb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_melo_r_p_g.html#ac90e81fad59a10f97d7e0b46c1808fb1">draw</a> ()</td></tr>
 <tr class="separator:ac90e81fad59a10f97d7e0b46c1808fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4875e9caeed693061390ac7a6eec23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_melo_r_p_g.html#a4d4875e9caeed693061390ac7a6eec23">addMoveCommands</a> (std::shared_ptr&lt; <a class="el" href="class_i_movable.html">IMovable</a> &gt; player)</td></tr>
+<tr class="separator:a4d4875e9caeed693061390ac7a6eec23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -128,6 +131,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a31f2d0a6c71b7e39d20a163f57299584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa152ae852a90adcc9a8f6ae1af6ebbae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_component_manager.html">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_melo_r_p_g.html#aa152ae852a90adcc9a8f6ae1af6ebbae">_componentManager</a></td></tr>
 <tr class="separator:aa152ae852a90adcc9a8f6ae1af6ebbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa54c202d0190b5602455914b8bc4e699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_input_handler.html">InputHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_melo_r_p_g.html#aa54c202d0190b5602455914b8bc4e699">handler</a></td></tr>
+<tr class="separator:aa54c202d0190b5602455914b8bc4e699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a03f2bbdf7d31178d34301febfda82a31"></a>
@@ -169,6 +174,50 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4d4875e9caeed693061390ac7a6eec23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MeloRPG::addMoveCommands </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_i_movable.html">IMovable</a> &gt;&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_melo_r_p_g_a4d4875e9caeed693061390ac7a6eec23_cgraph.png" border="0" usemap="#class_melo_r_p_g_a4d4875e9caeed693061390ac7a6eec23_cgraph" alt=""/></div>
+<map name="class_melo_r_p_g_a4d4875e9caeed693061390ac7a6eec23_cgraph" id="class_melo_r_p_g_a4d4875e9caeed693061390ac7a6eec23_cgraph">
+<area shape="rect" id="node2" href="class_input_handler.html#adbf60f3cf73a0c0b4165cce937419dd9" title="InputHandler::addCommand" alt="" coords="260,5,445,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_melo_r_p_g_a4d4875e9caeed693061390ac7a6eec23_icgraph.png" border="0" usemap="#class_melo_r_p_g_a4d4875e9caeed693061390ac7a6eec23_icgraph" alt=""/></div>
+<map name="class_melo_r_p_g_a4d4875e9caeed693061390ac7a6eec23_icgraph" id="class_melo_r_p_g_a4d4875e9caeed693061390ac7a6eec23_icgraph">
+<area shape="rect" id="node2" href="class_melo_r_p_g.html#a100549a6fbf06c4c243f531085769365" title="MeloRPG::start" alt="" coords="260,5,373,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a694ca9eb65c83b26a47a75e91ed94d82"></a>
 <div class="memitem">
 <div class="memproto">
@@ -262,11 +311,15 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_melo_r_p_g_a100549a6fbf06c4c243f531085769365_cgraph.png" border="0" usemap="#class_melo_r_p_g_a100549a6fbf06c4c243f531085769365_cgraph" alt=""/></div>
 <map name="class_melo_r_p_g_a100549a6fbf06c4c243f531085769365_cgraph" id="class_melo_r_p_g_a100549a6fbf06c4c243f531085769365_cgraph">
-<area shape="rect" id="node2" href="class_component_manager.html#ab62bf0c3aaa1c6872eb3c1156fcf0e45" title="ComponentManager::addComponent" alt="" coords="167,5,401,32"/>
-<area shape="rect" id="node3" href="class_melo_r_p_g.html#a3c01a6bcb79f4e662c6ceb017fc1c57d" title="MeloRPG::update" alt="" coords="221,56,347,83"/>
-<area shape="rect" id="node5" href="class_melo_r_p_g.html#ac90e81fad59a10f97d7e0b46c1808fb1" title="MeloRPG::draw" alt="" coords="227,107,341,133"/>
-<area shape="rect" id="node4" href="class_component_manager.html#a6e56fec7efa9670e5ee4039dbc2ed883" title="ComponentManager::update" alt="" coords="449,56,636,83"/>
-<area shape="rect" id="node6" href="class_component_manager.html#ada01de353f3665835045c70e1450dd84" title="ComponentManager::draw" alt="" coords="455,107,630,133"/>
+<area shape="rect" id="node2" href="class_component_manager.html#ab5856d5226847e56f2245b19e868640b" title="ComponentManager::addComponent" alt="" coords="167,5,401,32"/>
+<area shape="rect" id="node3" href="class_melo_r_p_g.html#a4d4875e9caeed693061390ac7a6eec23" title="MeloRPG::addMoveCommands" alt="" coords="181,56,387,83"/>
+<area shape="rect" id="node5" href="class_melo_r_p_g.html#a3c01a6bcb79f4e662c6ceb017fc1c57d" title="MeloRPG::update" alt="" coords="221,107,347,133"/>
+<area shape="rect" id="node9" href="class_melo_r_p_g.html#ac90e81fad59a10f97d7e0b46c1808fb1" title="MeloRPG::draw" alt="" coords="227,183,341,209"/>
+<area shape="rect" id="node4" href="class_input_handler.html#adbf60f3cf73a0c0b4165cce937419dd9" title="InputHandler::addCommand" alt="" coords="450,5,635,32"/>
+<area shape="rect" id="node6" href="class_input_handler.html#a52618da1c73c3c42bff8cde18c0797e7" title="InputHandler::handleInput" alt="" coords="457,56,628,83"/>
+<area shape="rect" id="node7" href="class_i_command.html#ace81beb0beea968f876f292446bf1120" title="ICommand::execute" alt="" coords="473,107,613,133"/>
+<area shape="rect" id="node8" href="class_component_manager.html#a6e56fec7efa9670e5ee4039dbc2ed883" title="ComponentManager::update" alt="" coords="449,157,636,184"/>
+<area shape="rect" id="node10" href="class_component_manager.html#ada01de353f3665835045c70e1450dd84" title="ComponentManager::draw" alt="" coords="455,208,630,235"/>
 </map>
 </div>
 </p>
@@ -300,7 +353,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_melo_r_p_g_a3c01a6bcb79f4e662c6ceb017fc1c57d_cgraph.png" border="0" usemap="#class_melo_r_p_g_a3c01a6bcb79f4e662c6ceb017fc1c57d_cgraph" alt=""/></div>
 <map name="class_melo_r_p_g_a3c01a6bcb79f4e662c6ceb017fc1c57d_cgraph" id="class_melo_r_p_g_a3c01a6bcb79f4e662c6ceb017fc1c57d_cgraph">
-<area shape="rect" id="node2" href="class_component_manager.html#a6e56fec7efa9670e5ee4039dbc2ed883" title="ComponentManager::update" alt="" coords="180,5,367,32"/>
+<area shape="rect" id="node2" href="class_input_handler.html#a52618da1c73c3c42bff8cde18c0797e7" title="InputHandler::handleInput" alt="" coords="188,5,359,32"/>
+<area shape="rect" id="node3" href="class_i_command.html#ace81beb0beea968f876f292446bf1120" title="ICommand::execute" alt="" coords="203,56,343,83"/>
+<area shape="rect" id="node4" href="class_component_manager.html#a6e56fec7efa9670e5ee4039dbc2ed883" title="ComponentManager::update" alt="" coords="180,107,367,133"/>
 </map>
 </div>
 </p>
@@ -358,6 +413,26 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="aa54c202d0190b5602455914b8bc4e699"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_input_handler.html">InputHandler</a> MeloRPG::handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_melo_r_p_g_8h_source.html">MeloRPG.h</a></li>
 <li><a class="el" href="_melo_r_p_g_8cpp.html">MeloRPG.cpp</a></li>
@@ -365,7 +440,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 9 2016 13:16:01 for MeloRPG by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 2 2016 08:37:12 for MeloRPG by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -93,15 +93,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_actor.html#a83ce4b44e16298ac8a7ada6dc92f71c8">_position</a></td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_actor.html#a7c795b9554095f5981b6ffa8f536f1c4">Actor</a>(sf::Vector2f *position)</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_actor.html#af2ee4f25d25895680774f64833017117">getPosition</a>() const override</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_actor.html#ab0bd18427eeffe998f71d801cafb3dcd">moveBy</a>(sf::Vector2f &amp;amount) override</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_actor.html#a9fb620beec4387d9637f5823c3b4c38a">moveTo</a>(sf::Vector2f &amp;position) override</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_updatable.html#a2fa6f4b0d7aafb91f0cdf0b5b3c80be9">update</a>(sf::Time &amp;elapsedTime, std::vector&lt; sf::Event &gt; &amp;events)=0</td><td class="entry"><a class="el" href="class_i_updatable.html">IUpdatable</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_actor.html#ad807fe8f85e72ab263a0c05e3231cb39">~Actor</a>()</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_movable.html#a776ced4323a417c289ab467606d48fab">changeNextMove</a>(sf::Vector2f)=0</td><td class="entry"><a class="el" href="class_i_movable.html">IMovable</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_actor.html#af2ee4f25d25895680774f64833017117">getPosition</a>() const override</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_actor.html#ab0bd18427eeffe998f71d801cafb3dcd">moveBy</a>(sf::Vector2f &amp;amount) override</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_actor.html#a9fb620beec4387d9637f5823c3b4c38a">moveTo</a>(sf::Vector2f &amp;position) override</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_updatable.html#a2fa6f4b0d7aafb91f0cdf0b5b3c80be9">update</a>(sf::Time &amp;elapsedTime, std::vector&lt; sf::Event &gt; &amp;events)=0</td><td class="entry"><a class="el" href="class_i_updatable.html">IUpdatable</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_actor.html#ad807fe8f85e72ab263a0c05e3231cb39">~Actor</a>()</td><td class="entry"><a class="el" href="class_actor.html">Actor</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 9 2016 13:16:01 for MeloRPG by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 2 2016 08:37:12 for MeloRPG by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

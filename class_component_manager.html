@@ -97,8 +97,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab62bf0c3aaa1c6872eb3c1156fcf0e45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_manager.html#ab62bf0c3aaa1c6872eb3c1156fcf0e45">addComponent</a> (std::unique_ptr&lt; <a class="el" href="class_i_component.html">IComponent</a> &gt; component)</td></tr>
-<tr class="separator:ab62bf0c3aaa1c6872eb3c1156fcf0e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5856d5226847e56f2245b19e868640b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_manager.html#ab5856d5226847e56f2245b19e868640b">addComponent</a> (std::shared_ptr&lt; <a class="el" href="class_i_component.html">IComponent</a> &gt; component, std::shared_ptr&lt; <a class="el" href="class_i_movable.html">IMovable</a> &gt; moveInterface=nullptr)</td></tr>
+<tr class="separator:ab5856d5226847e56f2245b19e868640b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e56fec7efa9670e5ee4039dbc2ed883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_manager.html#a6e56fec7efa9670e5ee4039dbc2ed883">update</a> (sf::Time &amp;gameTime, std::vector&lt; sf::Event &gt; &amp;events)</td></tr>
 <tr class="separator:a6e56fec7efa9670e5ee4039dbc2ed883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada01de353f3665835045c70e1450dd84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_manager.html#ada01de353f3665835045c70e1450dd84">draw</a> (<a class="el" href="_global_defs_8h.html#a142cc4db393eb934be0d9d1728ac301d">PtrRenderTarget</a> target)</td></tr>
@@ -106,20 +106,32 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ae2000b9f961ea05a5e5ab87b2b595da3"><td class="memItemLeft" align="right" valign="top">std::forward_list&lt; std::unique_ptr&lt; <a class="el" href="class_i_component.html">IComponent</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_manager.html#ae2000b9f961ea05a5e5ab87b2b595da3">_components</a></td></tr>
-<tr class="separator:ae2000b9f961ea05a5e5ab87b2b595da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99d9cd553197e765995f8898f278ab5"><td class="memItemLeft" align="right" valign="top">std::forward_list&lt; std::shared_ptr&lt; <a class="el" href="class_i_component.html">IComponent</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_manager.html#ad99d9cd553197e765995f8898f278ab5">_components</a></td></tr>
+<tr class="separator:ad99d9cd553197e765995f8898f278ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8695d79e046ff0eab4ec06429f6c6b5c"><td class="memItemLeft" align="right" valign="top">std::forward_list&lt; std::shared_ptr&lt; <a class="el" href="class_i_movable.html">IMovable</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_manager.html#a8695d79e046ff0eab4ec06429f6c6b5c">_moveInterfaces</a></td></tr>
+<tr class="separator:a8695d79e046ff0eab4ec06429f6c6b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab62bf0c3aaa1c6872eb3c1156fcf0e45"></a>
+<a class="anchor" id="ab5856d5226847e56f2245b19e868640b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ComponentManager::addComponent </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_i_component.html">IComponent</a> &gt;&#160;</td>
-          <td class="paramname"><em>component</em></td><td>)</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_i_component.html">IComponent</a> &gt;&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_i_movable.html">IMovable</a> &gt;&#160;</td>
+          <td class="paramname"><em>moveInterface</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -127,8 +139,8 @@ Private Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_component_manager_ab62bf0c3aaa1c6872eb3c1156fcf0e45_icgraph.png" border="0" usemap="#class_component_manager_ab62bf0c3aaa1c6872eb3c1156fcf0e45_icgraph" alt=""/></div>
-<map name="class_component_manager_ab62bf0c3aaa1c6872eb3c1156fcf0e45_icgraph" id="class_component_manager_ab62bf0c3aaa1c6872eb3c1156fcf0e45_icgraph">
+<div class="center"><img src="class_component_manager_ab5856d5226847e56f2245b19e868640b_icgraph.png" border="0" usemap="#class_component_manager_ab5856d5226847e56f2245b19e868640b_icgraph" alt=""/></div>
+<map name="class_component_manager_ab5856d5226847e56f2245b19e868640b_icgraph" id="class_component_manager_ab5856d5226847e56f2245b19e868640b_icgraph">
 <area shape="rect" id="node2" href="class_melo_r_p_g.html#a100549a6fbf06c4c243f531085769365" title="MeloRPG::start" alt="" coords="288,5,401,32"/>
 </map>
 </div>
@@ -201,7 +213,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ae2000b9f961ea05a5e5ab87b2b595da3"></a>
+<a class="anchor" id="ad99d9cd553197e765995f8898f278ab5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -209,7 +221,27 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::forward_list&lt;std::unique_ptr&lt;<a class="el" href="class_i_component.html">IComponent</a>&gt; &gt; ComponentManager::_components</td>
+          <td class="memname">std::forward_list&lt;std::shared_ptr&lt;<a class="el" href="class_i_component.html">IComponent</a>&gt; &gt; ComponentManager::_components</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8695d79e046ff0eab4ec06429f6c6b5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::forward_list&lt;std::shared_ptr&lt;<a class="el" href="class_i_movable.html">IMovable</a>&gt; &gt; ComponentManager::_moveInterfaces</td>
         </tr>
       </table>
   </td>
@@ -228,7 +260,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 9 2016 13:16:01 for MeloRPG by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 2 2016 08:37:12 for MeloRPG by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -1,0 +1,5 @@
+<map id="IMovable" name="IMovable">
+<area shape="rect" id="node2" href="$class_i_actor.html" title="IActor" alt="" coords="14,80,71,107"/>
+<area shape="rect" id="node3" href="$class_actor.html" title="Actor" alt="" coords="16,155,69,181"/>
+<area shape="rect" id="node4" href="$class_player.html" title="Player" alt="" coords="13,229,72,256"/>
+</map>

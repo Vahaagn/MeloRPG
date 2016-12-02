@@ -1,7 +1,9 @@
 <map id="IActor.h" name="IActor.h">
-<area shape="rect" id="node2" href="$_i_component_8h.html" title="../IComponent.h" alt="" coords="1490,80,1606,107"/>
-<area shape="rect" id="node3" href="$_global_defs_8h.html" title="../GlobalDefs.h" alt="" coords="705,155,815,181"/>
-<area shape="rect" id="node16" href="$_i_updatable_8h.html" title="IUpdatable.h" alt="" coords="1500,155,1596,181"/>
-<area shape="rect" id="node18" href="$_i_drawable_8h.html" title="IDrawable.h" alt="" coords="1663,155,1755,181"/>
-<area shape="rect" id="node13" href="$_std_patch_8h.html" title="Utils/StdPatch.h" alt="" coords="1323,229,1442,256"/>
+<area shape="rect" id="node2" href="$_i_movable_8h.html" title="Managers/IMovable.h" alt="" coords="485,80,631,107"/>
+<area shape="rect" id="node5" href="$_i_component_8h.html" title="../IComponent.h" alt="" coords="767,80,883,107"/>
+<area shape="rect" id="node4" href="$_direction_8h.html" title="Utils/Direction.h" alt="" coords="500,155,616,181"/>
+<area shape="rect" id="node6" href="$_global_defs_8h.html" title="../GlobalDefs.h" alt="" coords="705,155,816,181"/>
+<area shape="rect" id="node18" href="$_i_updatable_8h.html" title="IUpdatable.h" alt="" coords="1027,155,1123,181"/>
+<area shape="rect" id="node20" href="$_i_drawable_8h.html" title="IDrawable.h" alt="" coords="1521,155,1613,181"/>
+<area shape="rect" id="node15" href="$_std_patch_8h.html" title="Utils/StdPatch.h" alt="" coords="1324,229,1443,256"/>
 </map>
